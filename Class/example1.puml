@@ -1,0 +1,11 @@
+@startuml
+abstract class Superclass << general >>	
+abstract AbstractCreator{
+  {abstract} create() : Superclass
+}
+Superclass <|-- Subclass
+note left of Superclass : Instantiation not possible 
+ConcreteCreator-up-|> AbstractCreator 
+ConcreteCreator : create() : Superclass
+ConcreteCreator .> Subclass
+@enduml
