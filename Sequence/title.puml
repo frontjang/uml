@@ -1,0 +1,21 @@
+@startuml
+/' 
+You can use creole formatting in the title. 
+title __Simple__ **communication** example\non several lines
+'/
+
+title
+ <u>Simple</u> communication example
+ on <i>several</i> lines and using <font color=red>html</font>
+end title
+
+/'caption figure 1 => doesnot work'/
+Alice -> Bob: Authentication Request
+Bob --> Alice: Authentication Response
+
+legend right
+  Short
+  legend
+endlegend
+
+@enduml
