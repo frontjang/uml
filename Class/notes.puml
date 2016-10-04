@@ -1,0 +1,34 @@
+@startuml
+class Object << general >>
+Object <|--- ArrayList
+
+note top of Object : In java, every class\nextends this one.
+
+note "This is a floating note" as N1
+note "This note is connected\nto several objects." as N2
+Object .. N2
+N2 .. ArrayList
+
+note top of Object
+  In java, <size:18>every</size> <u>class</u>
+  <b>extends</b>
+  <i>this</i> one.
+  <b><color:royalBlue>on several</color>
+  <s>words</s> lines
+end note
+/' And this is hosted by <img:sourceforge.jpg> '/
+
+
+class Foo
+note left: On last defined class
+
+class Dummy
+Dummy --> Foo : A link
+note on link #red: note that is red
+
+Dummy --> Foo2 : Another link
+note right on link #blue
+	this is my note on right link
+	and in blue
+end note
+@enduml

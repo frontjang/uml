@@ -1,0 +1,23 @@
+@startuml
+/' Figure 1-2. Class diagram of TreeMap. '/
+hide fields
+
+
+class TreeMap{
+	+add(key, value)
+	+get(key)
+}
+
+class TreeMapNode{
+	+add(key, value)
+	+get(key)
+}
+
+interface Comparable << interface >>
+
+TreeMap --> TreeMapNode: topNode
+TreeMapNode -u-> "2" TreeMapNode: nodes
+TreeMapNode --> Comparable : itsKey
+TreeMapNode --> Object : itsValue
+
+@enduml

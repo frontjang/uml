@@ -1,0 +1,32 @@
+@startuml
+
+class BaseClass
+
+namespace net.dummy #DDDDDD {
+    .BaseClass <|-- Person
+    Meeting o-- Person
+    
+    .BaseClass <|- Meeting
+}
+
+namespace net.foo {
+  net.dummy.Person  <|- Person
+  .BaseClass <|-- Person
+
+  net.dummy.Meeting o-- Person
+}
+
+BaseClass <|-- net.unused.Person
+
+
+set namespaceSeparator ::
+class X1::X2::foo {
+  some info
+}
+
+set namespaceSeparator none
+class X1.X2.foo {
+  some info
+}
+
+@enduml

@@ -1,0 +1,28 @@
+@startuml
+
+class Dummy1 {
+  +myMethods()
+}
+
+class Dummy2 {
+  +hiddenMethod()
+}
+
+class Dummy3 <<Serializable>> {
+	String name
+}
+
+hide members
+hide <<Serializable>> circle
+show Dummy1 methods
+show <<Serializable>> fields
+
+class Foo1
+class Foo2
+
+Foo2 *-- Foo1
+
+hide Foo2
+
+
+@enduml

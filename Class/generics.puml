@@ -1,0 +1,10 @@
+@startuml
+
+class Foo<? extends Element> {
+  int size()
+}
+Foo *- Element
+
+class System << (S,#FF7700) Singleton >>
+class Date << (D,orchid) >>
+@enduml

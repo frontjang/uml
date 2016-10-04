@@ -1,0 +1,11 @@
+@startuml
+
+title Simple <b>example</b>\nof title 
+Object <|-- ArrayList
+
+legend right
+  <b>Object</b> and <b>ArrayList</b>
+  are simple class
+endlegend
+
+@enduml
